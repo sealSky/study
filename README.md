@@ -5,9 +5,13 @@
 
 
 开始
+
 2018.6.25日
+
 需求1：input输入价格小数点最多为2位，达到两位数之后不可继续输入了。
+
 方法1：使用键盘按下事件onkeydown 判断输入，获取小数点的在input的value中的位置，当有小数点时进行输入限制，使用字符串长度减去小数点的位置，当大于等于3时候设置input的maxlength属性。
+
 function decimal(obj) {
     let val = $(obj).val();
     let index = val.indexOf('.');
@@ -22,3 +26,7 @@ function decimal(obj) {
         $(obj).prop("maxLength", 10);
     }
 }
+
+学习1：
+
+使用webstrom开放TypeScript使用npm下载全局typescript包，在项目中建立tsconfig.json配置文件即可，具体配置的选项目前并没有阅读
