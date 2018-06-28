@@ -30,3 +30,25 @@ function decimal(obj) {
 学习1：
 
 使用webstrom开放TypeScript使用npm下载全局typescript包，在项目中建立tsconfig.json配置文件即可，具体配置的选项目前并没有阅读
+
+2018.6.27
+
+学习1：
+
+使用iframe内嵌的网页时，当登录过期之后会在iframe中进行重定向，造成网站的整体不美观使用 
+
+$(function () {
+    //判断一下当前是不是做顶层，如果不是，则做一下顶层页面重定向
+    if (window != top) {
+        top.location.href = location.href;
+    }
+});
+
+前端处理判断其所在的窗口是不是浏览器顶层窗口，不是的话就设置为顶层窗口。
+
+
+2018.6.28
+
+学习1：
+
+使用form表单的action里面的submit提交数据可以使用回车键直接提交，但是会跳转到action的路径中去，可以改用AJAX进行数据提交而不跳转，或者form的onsubmit="return false"
