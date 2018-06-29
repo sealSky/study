@@ -51,4 +51,10 @@ $(function () {
 
 学习1：
 
-使用form表单的action里面的submit提交数据可以使用回车键直接提交，但是会跳转到action的路径中去，可以改用AJAX进行数据提交而不跳转，或者form的onsubmit="return false"
+使用form表单的action里面的submit提交数据可以使用回车键直接提交，但是会跳转到action的路径中去，可以改用AJAX进行数据提交而不跳转，或者form的onsubmit="return callback()" callback为提交的回调函数，提交按钮还是使用usbmit进行提交
+
+2018.6.29
+
+学习1：
+
+pagination分页渲染数据与自身调用的方法，应该使用方法将请求渲染数据与重新定义分页放在一起，不要将分页直接放入渲染函数中，在分页的点击回调函数里面引入渲染函数，
