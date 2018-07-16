@@ -84,3 +84,28 @@ DataTable数据初始化会先请求后台参数，得不到预期的效果
 2018.7.9
 
 开始实施前端图片优化，使用熊猫压缩对图片进行压缩处理，并没有使用前端打包工具进行项目的构建压缩等等，希望之后可以学到更多的图片优化方式，发现.gif格式的图片并不能进行压缩。
+
+
+2018.7.14
+
+input价格输入
+
+onkeyup="amount(this)";
+
+function amount(th, ev){
+            let event = ev || window.event;
+
+            if (event.keyCode == 37 || event.keyCode == 39) {
+                return;
+            }
+            var regStrs = [
+                ['^0(\\d+)$', '$1'], //禁止录入整数部分两位以上，但首位为0
+                ['[^\\d\\.]+$', ''], //禁止录入任何非数字和点
+                ['\\.(\\d?)\\.+', '.$1'], //禁止录入两个以上的点
+                ['^(\\d+\\.\\d{2}).+', '$1'] //禁止录入小数点后两位以上
+            ];
+            for(i=0; i<regStrs.length; i++){
+                var reg = new RegExp(regStrs[i][0]);
+                th.value = th.value.replace(reg, regStrs[i][1]);
+            }
+        }
