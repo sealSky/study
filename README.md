@@ -109,3 +109,8 @@ function amount(th, ev){
                 th.value = th.value.replace(reg, regStrs[i][1]);
             }
         }
+
+2018.7.20
+
+ES6学习，
+
