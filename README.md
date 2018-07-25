@@ -114,8 +114,21 @@ function amount(th, ev){
 
 ES6学习，ES6五种方法遍历对象的属性
 
-（1）for...in
+ （1）for...in
  for...in循环遍历对象自身和继承的可枚举属性（不含Symbol属性）。
+ （2）Object.keys(obj)
+ Object.keys返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含Symbol属性）的键名
+ （3）Object.getOwnPropertyNames(obj)
+ Object.getOwnPropertyName返回一个数组，包含对象自身的所有属性（不含 Symbol 属性，但是包括不可枚举属性）的键名。
+（4）Object.getOwnPropertySymbols(obj)
 
- （2）
+Object.getOwnPropertySymbols返回一个数组，包含对象自身的所有 Symbol 属性的键名。
 
+（5）Reflect.ownKeys(obj)
+
+Reflect.ownKeys返回一个数组，包含对象自身的所有键名，不管键名是 Symbol 或字符串，也不管是否可枚举。
+
+2018.7.25
+学习，后端重定向是根据路由请求进行的，在登录过期之后需要对用户进行首页的重定向操作，应该添加对HTTP请求的判断，因为一些AJAX请求是不进行路由跳转的导致失效，在登录失效之后对HTTP请求加上重定向判断应该可以解决此问题。
+在元素中使用onclick="fn(1,2,3,)"绑定函数，当函数参数名为空时在某些浏览器会报错，Unexpected token 肯定就是那个地方少了对应的符号，比如“”，只有一般就会报这个错误，会在<!DOCTYPE html>这个地方报错！,该问题也很可能时传入参数类型的问题，
+在IE浏览器中，可以测试出标签的正确闭合问题
